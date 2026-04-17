@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-color: #d9d9d9;
+    font-family: "Times New Roman", serif;
+}
+
+/* Center page */
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Envelope with airmail border */
+.envelope {
+    width: 420px;
+    height: 260px;
+    background: white;
+    position: relative;
+    padding: 30px;
+
+    /* Airmail-style border */
+    border: 12px solid transparent;
+    border-image: repeating-linear-gradient(
+        45deg,
+        red 0px,
+        red 10px,
+        white 10px,
+        white 20px,
+        blue 20px,
+        blue 30px,
+        white 30px,
+        white 40px
+    ) 20;
+}
+
+/* Stamp area (top right like real envelope) */
+.stamp {
+    width: 70px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 2px dashed #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stamp-inner {
+    width: 40px;
+    height: 25px;
+    background: #eee;
+}
+
+/* Address block */
+.address {
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.address p {
+    margin: 3px 0;
+}
+
+/* Postmark */
+.postmark {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 22px;
+    opacity: 0.3;
+    transform: rotate(-10deg);
+}
