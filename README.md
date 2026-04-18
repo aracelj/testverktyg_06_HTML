@@ -64,7 +64,7 @@ Tips:
 ```
 
 
-###1. Build a website that contains a recipe. The webpage should contains the ff:
+###2. Build a website that contains a recipe. The webpage should contains the ff:
 1. Picture of the food
 2. Heading - what is the name of the food
 3. Short vignette, i.e. presentation of what is to be cooked
@@ -83,4 +83,19 @@ Start with a subheading, and feel free to add more sub-subheadings.
 ● at least one link to a relevant page
 ```commandline
     my_web/index.html
+```
+
+## 4. Extra Exercises
+### 1.Build a page that resembles the image as much as possible. (It doesn't have to be the exact same font.) https://drive.google.com/file/d/0B6f5ao4RFptGUkF4MEJvcmFDSlk/view?resourcekey=0-RsU50-4DGSD0OmQ_77dkdQ
+```commandline
+    extra_01_favourite_things/index.html
+```
+
+### 2.Build a page that looks like an old-fashioned letter. A letter consists of:
+● background (e.g. gray)
+● the letter itself (white)
+● the address lines
+● (ignore the rest)
+```commandline
+    extra_02_letter/index.html
 ```

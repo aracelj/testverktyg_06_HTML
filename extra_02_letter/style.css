@@ -1,0 +1,104 @@
+body {
+    background-color: #d9d9d9;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+}
+
+/* Center page */
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Envelope with airmail border */
+.envelope {
+    position: relative;
+    width: 570px;
+    height: 320px;
+    background: white;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* CONTINUOUS AIRMAIL BORDER */
+.envelope::before {
+    content: "";
+    position: absolute;
+    inset: -15px; /* extends beyond edges for smooth wrap */
+
+    background: repeating-linear-gradient(
+        -55deg,
+        red 0 12px,
+        white 12px 22px,
+        #66b3ff 22px 32px,
+        white 32px 42px
+    );
+
+    z-index: 0;
+}
+
+/* CUT OUT THE CENTER (so only border remains) */
+.envelope::after {
+    content: "";
+    position: absolute;
+    inset: 15px; /* matches padding */
+    background: white;
+    z-index: 1;
+}
+
+/* keep content above border */
+.envelope > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Stamp area (top right) */
+.stamp {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+
+    background: white;
+}
+
+/* Address block */
+.address {
+    position: absolute;
+    top: 53%;
+    left: 53%;
+    transform: translate(-50%, -25%);
+
+    width: 250px;
+
+    text-align: left;
+    color: #2c5aa0;
+
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "MV Boli", serif;
+
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 30px,
+        #d0d0d0 30px,
+        #d0d0d0 31px
+    );
+    padding-bottom: 30px;
+}
+
+.address * {
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+.name {
+    font-size: 32px;
+}
+
+.poststamp {
+    position: relative;
+}
